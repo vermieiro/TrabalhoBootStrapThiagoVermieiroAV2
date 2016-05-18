@@ -28,9 +28,11 @@
 	}
 	@media screen and (min-width: 500px) {
     body {
-        width:50%;
 		margin: 0 auto;
     }
+	.form{
+	width:100%;
+	}
 	</style>
 	<body>
 		<form class="form" name ="cadastro" onsubmit="return valida_form(this); ">
@@ -53,22 +55,20 @@
 						<input  type ="text" id="nome" onblur="LetraMasc(this)" onKeypress="LetraMasc(this);return SomenteLetras(event)"/>
 					</div>
 				</div>
-			</div>	
-			<div class="row">
 				<div class="span4">Endereço:*
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-home"></i></span>
 						<input type ="text" id="endereco" onblur="LetraMasc(this)" onKeypress="LetraMasc(this)" />
 					</div>
 				</div>
+			</div>	
+			<div class="row">
 				<div class="span4">Cidade:*
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-map-marker"></i></span>
 						<input type ="text" id="cidade" onblur="LetraMasc(this)" onKeypress="LetraMasc(this)"/>
 					</div>
 				</div>
-			</div>	
-			<div class="row">
 				<div class="span4">Cidade:*
 					<div class="input-prepend">
 						<span class="add-on"><i class="icon-edit"></i></span>
@@ -99,8 +99,6 @@
 						<input type ="password" id="senha" onKeypress="return LetraNumero(event)" minlength="6"/>
 					</div>
 				</div>
-			</div>	
-			<div class="row">
 				<div class="span4">Receber notificações:*</div>
 				<div class="span4" id="check">
 					<input type="checkbox" id="sim" name="receber" value="sim" onclick="MostrarTexto();CheckOsBox(this.id)"/>Sim
